@@ -1,4 +1,4 @@
-package com.ghenriqf.spring_boot_api_alunos.domain;
+package com.ghenriqf.spring_boot_api_alunos.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -48,4 +48,11 @@ public class Aluno {
     @Column(name = "curso")
     private String curso;
 
+    public Aluno(String nome, LocalDate dataNascimento, String email, String cpf, String curso) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.email = email;
+        this.cpf = cpf;
+        this.curso = curso;
+    }
 }
