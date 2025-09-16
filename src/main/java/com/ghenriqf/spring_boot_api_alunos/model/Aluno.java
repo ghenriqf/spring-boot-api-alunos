@@ -4,18 +4,10 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
 import java.time.LocalDate;
 import java.util.UUID;
 
-
-@Getter
-@Setter
-@NoArgsConstructor
 @Entity
 @Table(name = "tb_alunos")
 public class Aluno {
@@ -23,7 +15,6 @@ public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id")
-    @Setter(AccessLevel.NONE)
     private UUID id;
 
     @NotBlank(message = "O nome é obrigatório")
@@ -48,6 +39,9 @@ public class Aluno {
     @Column(name = "curso")
     private String curso;
 
+    public Aluno() {
+    }
+
     public Aluno(String nome, LocalDate dataNascimento, String email, String cpf, String curso) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -55,4 +49,49 @@ public class Aluno {
         this.cpf = cpf;
         this.curso = curso;
     }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
 }
