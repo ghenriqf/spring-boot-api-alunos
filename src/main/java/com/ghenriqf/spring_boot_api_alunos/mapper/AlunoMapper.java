@@ -20,8 +20,6 @@ public class AlunoMapper {
                 aluno.getId(),
                 aluno.getNome(),
                 aluno.getDataNascimento(),
-                aluno.getEmail(),
-                aluno.getCpf(),
                 aluno.getCurso());
     }
 }
