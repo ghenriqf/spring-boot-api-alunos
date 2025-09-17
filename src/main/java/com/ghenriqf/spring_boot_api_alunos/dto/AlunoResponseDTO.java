@@ -7,7 +7,5 @@ public record AlunoResponseDTO(
         UUID id,
         String nome,
         LocalDate dataNascimento,
-        String email,
-        String cpf,
         String curso
 ) {}
