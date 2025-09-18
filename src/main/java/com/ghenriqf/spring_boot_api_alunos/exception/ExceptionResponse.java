@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class ExceptionResponse {
     private String mensagem;
     private int status;
-    LocalDateTime timestamp;
+    private LocalDateTime timestamp;
 
     public ExceptionResponse(String mensagem, int status) {
         this.mensagem = mensagem;
