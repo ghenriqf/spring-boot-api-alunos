@@ -6,7 +6,9 @@ import com.ghenriqf.spring_boot_api_alunos.exception.RecursoDuplicadoException;
 import com.ghenriqf.spring_boot_api_alunos.mapper.AlunoMapper;
 import com.ghenriqf.spring_boot_api_alunos.model.Aluno;
 import com.ghenriqf.spring_boot_api_alunos.repository.AlunoRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AlunoService {
     private final AlunoRepository alunoRepository;
     private final AlunoMapper alunoMapper;

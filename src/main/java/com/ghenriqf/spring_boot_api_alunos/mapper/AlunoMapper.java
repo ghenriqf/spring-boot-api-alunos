@@ -3,7 +3,9 @@ package com.ghenriqf.spring_boot_api_alunos.mapper;
 import com.ghenriqf.spring_boot_api_alunos.dto.AlunoRequestDTO;
 import com.ghenriqf.spring_boot_api_alunos.dto.AlunoResponseDTO;
 import com.ghenriqf.spring_boot_api_alunos.model.Aluno;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AlunoMapper {
 
     public Aluno toEntity(AlunoRequestDTO dto) {
