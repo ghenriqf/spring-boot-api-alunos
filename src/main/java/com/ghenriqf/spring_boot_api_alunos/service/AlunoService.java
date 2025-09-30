@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 
 import javax.swing.*;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class AlunoService {
@@ -24,7 +24,9 @@ public class AlunoService {
         this.alunoMapper = alunoMapper;
     }
     public AlunoResponseDTO buscarAluno(UUID id) {
-        return alunoRepository.findById(id).map(alunoMapper::toResponse).orElseThrow(() -> new RecursoNotFoundException(id));
+        return alunoRepository.findById(id)
+                .map(aluno -> alunoMapper.toResponse(aluno))
+                .orElseThrow(() -> new RecursoNotFoundException(id));
     }
 
     public AlunoResponseDTO salvarAluno(AlunoRequestDTO alunoRequestDTO) {
@@ -42,6 +44,14 @@ public class AlunoService {
 
    public AlunoResponseDTO deletarAluno(UUID id) {
         return alunoRepository.findById(id).map(alunoMapper::toResponse).orElseThrow(() -> new RecursoNotFoundException(id));
+   }
+
+   public List<AlunoResponseDTO> listarAlunos() {
+        return alunoRepository
+                .findAll()
+                .stream()
+                .map(aluno -> alunoMapper.toResponse(aluno))
+                .collect(Collectors.toList());
    }
 
 }
