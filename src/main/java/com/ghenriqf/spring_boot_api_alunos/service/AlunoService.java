@@ -30,7 +30,7 @@ public class AlunoService {
                 .orElseThrow(() -> new RecursoNotFoundException(id));
     }
 
-    public AlunoResponseDTO salvarAluno(AlunoRequestDTO alunoRequestDTO) {
+    public AlunoResponseDTO criarAluno(AlunoRequestDTO alunoRequestDTO) {
         if (alunoRepository.existsByEmail(alunoRequestDTO.email())) {
             throw new RecursoDuplicadoException("email já registrado: " + alunoRequestDTO.email());
         }
@@ -58,4 +58,13 @@ public class AlunoService {
                 .collect(Collectors.toList());
    }
 
+   public AlunoResponseDTO atualizarAluno(UUID id, AlunoRequestDTO alunoRequestDTO) {
+        return alunoRepository
+                .findById(id).map(aluno -> {
+                    aluno.setCurso(alunoRequestDTO.curso());
+                    aluno.setEmail(alunoRequestDTO.email());
+                    return alunoMapper.toResponse(alunoRepository.save(aluno));
+                })
+                .orElseThrow(() -> new RecursoNotFoundException(id));
+   }
 }
