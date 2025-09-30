@@ -46,7 +46,10 @@ public class AlunoService {
    public AlunoResponseDTO deletarAluno(UUID id) {
         return alunoRepository
                 .findById(id)
-                .map(aluno -> alunoMapper.toResponse(aluno))
+                .map(aluno -> {
+                    alunoRepository.delete(aluno);
+                    return alunoMapper.toResponse(aluno);
+                })
                 .orElseThrow(() -> new RecursoNotFoundException(id));
    }
 
