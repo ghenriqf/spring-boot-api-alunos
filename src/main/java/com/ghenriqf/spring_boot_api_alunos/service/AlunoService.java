@@ -24,7 +24,8 @@ public class AlunoService {
         this.alunoMapper = alunoMapper;
     }
     public AlunoResponseDTO buscarAluno(UUID id) {
-        return alunoRepository.findById(id)
+        return alunoRepository
+                .findById(id)
                 .map(aluno -> alunoMapper.toResponse(aluno))
                 .orElseThrow(() -> new RecursoNotFoundException(id));
     }
@@ -43,7 +44,10 @@ public class AlunoService {
    }
 
    public AlunoResponseDTO deletarAluno(UUID id) {
-        return alunoRepository.findById(id).map(alunoMapper::toResponse).orElseThrow(() -> new RecursoNotFoundException(id));
+        return alunoRepository
+                .findById(id)
+                .map(aluno -> alunoMapper.toResponse(aluno))
+                .orElseThrow(() -> new RecursoNotFoundException(id));
    }
 
    public List<AlunoResponseDTO> listarAlunos() {
