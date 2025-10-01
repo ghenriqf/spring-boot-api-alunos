@@ -2,7 +2,6 @@ package com.ghenriqf.spring_boot_api_alunos.controller;
 
 import com.ghenriqf.spring_boot_api_alunos.dto.AlunoRequestDTO;
 import com.ghenriqf.spring_boot_api_alunos.dto.AlunoResponseDTO;
-import com.ghenriqf.spring_boot_api_alunos.repository.AlunoRepository;
 import com.ghenriqf.spring_boot_api_alunos.service.AlunoService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
