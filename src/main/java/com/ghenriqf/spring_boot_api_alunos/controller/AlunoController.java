@@ -39,4 +39,9 @@ public class AlunoController {
     public List<AlunoResponseDTO> listarAlunos() {
         return alunoService.listarAlunos();
     }
+
+    @PutMapping("/{id}")
+    public AlunoResponseDTO atualizarAluno(@PathVariable UUID id, @RequestBody @Valid @NotNull AlunoRequestDTO alunoRequestDTO) {
+        return alunoService.atualizarAluno(id, alunoRequestDTO);
+    }
 }
