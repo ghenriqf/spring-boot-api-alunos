@@ -1,2 +1,32 @@
-# spring-boot-api-alunos
-API REST com Spring Boot para gerenciamento de alunos utilizando PostgreSQL.
+# Spring Boot API Alunos
+
+[![Java](https://img.shields.io/badge/Java-17-blue)](https://www.java.com/)  
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.4-brightgreen)](https://spring.io/projects/spring-boot)  
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)](https://www.postgresql.org/)  
+[![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)  
+
+API REST desenvolvida com **Spring Boot** para gerenciamento de **alunos** e **cursos**, permitindo operações de criação, leitura, atualização e exclusão em um banco de dados **PostgreSQL**.  
+
+---
+
+## Tecnologias Utilizadas
+
+- **Java 17**  
+- **Spring Boot**  
+- **PostgreSQL**  
+- **Maven**  
+
+---
+
+## Funcionalidades
+
+- CRUD completo de **alunos**  
+
+---
+
+## Como Rodar
+
+1. Clone o repositório:  
+```bash
+git clone https://github.com/ghenriqf/spring-boot-api-alunos.git
+cd spring-boot-api-alunos
