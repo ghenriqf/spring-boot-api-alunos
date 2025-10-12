@@ -5,7 +5,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)](https://www.postgresql.org/)  
 [![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)  
 
-API REST desenvolvida com **Spring Boot** para gerenciamento de **alunos** e **cursos**, permitindo operações de criação, leitura, atualização e exclusão em um banco de dados **PostgreSQL**.  
+API REST desenvolvida com **Spring Boot** para gerenciamento de **alunos**, permitindo operações de criação, leitura, atualização e exclusão em um banco de dados **PostgreSQL**.  
 
 ---
 
