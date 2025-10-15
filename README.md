@@ -20,12 +20,3 @@ API REST desenvolvida com **Spring Boot** para gerenciamento de **alunos**, perm
 ## Funcionalidades
 
 - CRUD completo de **alunos**  
-
----
-
-## Como Rodar
-
-1. Clone o repositório:  
-```bash
-git clone https://github.com/ghenriqf/spring-boot-api-alunos.git
-cd spring-boot-api-alunos
