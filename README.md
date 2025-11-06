@@ -1,8 +1,8 @@
 ## API REST de Gerenciamento de Alunos com Spring Boot
 
-[![Java](https://img.shields.io/badge/Java-17-blue)](https://www.java.com/)  
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.4-brightgreen)](https://spring.io/projects/spring-boot)  
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)](https://www.postgresql.org/)  
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
 API REST desenvolvida com Spring Boot para gerenciamento de alunos.  
 Permite criar, listar, atualizar, buscar e deletar alunos de forma simples e eficiente, seguindo boas práticas de arquitetura e validação de dados.
