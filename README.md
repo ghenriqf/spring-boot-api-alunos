@@ -42,11 +42,12 @@ src/
 ## Endpoints da API
 
 | Método | Endpoint | Descrição | Corpo da Requisição | Exemplo de Retorno |
-| POST | /alunos | Cadastrar um novo aluno | AlunoRequestDTO | AlunoResponseDTO |
-| GET | /alunos | Listar todos os alunos | — | Lista de AlunoResponseDTO |
-| GET | /alunos/{id} | Buscar aluno por ID | — | AlunoResponseDTO |
-| PUT | /alunos/{id} | Atualizar informações do aluno | AlunoRequestDTO | AlunoResponseDTO |
-| DELETE | /alunos/{id} | Remover um aluno do sistema | — | AlunoResponseDTO |
+|---------|-----------|------------|----------------------|---------------------|
+| **POST** | `/alunos` | Cadastrar um novo aluno | `AlunoRequestDTO` | `AlunoResponseDTO` |
+| **GET** | `/alunos` | Listar todos os alunos | — | Lista de `AlunoResponseDTO` |
+| **GET** | `/alunos/{id}` | Buscar aluno por ID | — | `AlunoResponseDTO` |
+| **PUT** | `/alunos/{id}` | Atualizar informações do aluno | `AlunoRequestDTO` | `AlunoResponseDTO` |
+| **DELETE** | `/alunos/{id}` | Remover um aluno do sistema | — | `AlunoResponseDTO` |
 
 ### Exemplo de Requisição (POST /alunos)
 
