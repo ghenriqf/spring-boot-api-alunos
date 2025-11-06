@@ -81,9 +81,10 @@ src/
 A API retorna respostas padronizadas com mensagens e status HTTP adequados:
 
 | Código | Tipo de Erro | Exemplo de Mensagem |
-| 400 | Validação de campos | "O email é obrigatório" |
-| 404 | Recurso não encontrado | "Recurso não encontrado com id: {id}" |
-| 409 | Recurso duplicado | "email já registrado: email@example.com" |
+|:------:|:-------------|:--------------------|
+| 400    | Validação de campos | `"O email é obrigatório"` |
+| 404    | Recurso não encontrado | `"Recurso não encontrado com id: {id}"` |
+| 409    | Recurso duplicado | `"email já registrado: email@example.com"` |
 
 ### Regras de Negócio
 
